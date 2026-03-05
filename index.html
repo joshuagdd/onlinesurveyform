@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Survey Form</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Online Survey Form</h1>
+		</header>
+
+		<main>
+			<div class="container">
+				<!-- Survey Form -->
+				<section class="survey-form">
+					<h2>Share Your Feedback</h2>
+					<form id="surveyForm">
+						<label for="fullName">Full Name:</label>
+						<input type="text" id="fullName" name="fullName" required />
+						<span class="error" id="fullNameError"></span>
+
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required />
+						<span class="error" id="emailError"></span>
+
+						<label for="rating">Rate Our Services:</label>
+						<select id="rating" name="rating">
+							<option value="">Select a rating</option>
+							<option value="1">1 - Poor</option>
+							<option value="2">2 - Fair</option>
+							<option value="3">3 - Good</option>
+							<option value="4">4 - Very Good</option>
+							<option value="5">5 - Excellent</option>
+						</select>
+						<span class="error" id="ratingError"></span>
+
+						<label for="feedback">Your Feedback:</label>
+						<textarea id="feedback" name="feedback"></textarea>
+
+						<button type="submit" id="submitButton" disabled>Submit</button>
+					</form>
+				</section>
+
+				<!-- Live Preview -->
+				<section class="preview">
+					<div>
+						<h2>Live Preview</h2>
+						<div class="preview-box">
+							<p><strong>Name:</strong> <span id="previewName">N/A</span></p>
+							<p><strong>Email:</strong> <span id="previewEmail">N/A</span></p>
+							<p>
+								<strong>Rating:</strong> <span id="previewRating">N/A</span>
+							</p>
+							<p>
+								<strong>Feedback:</strong> <span id="previewFeedback">N/A</span>
+							</p>
+						</div>
+					</div>
+					<div>
+						<h2>Summary</h2>
+						<div class="preview-box">
+							<p>
+								<strong>Total Responses:</strong>
+								<span id="totalResponses">0</span>
+							</p>
+							<p>
+								<strong>Average Rating:</strong
+								><span id="averageRating"> N/A</span>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- Responses Section -->
+			<section class="responses">
+				<h2>Responses</h2>
+				<div class="response-card">
+					<table id="responseTable">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Rating</th>
+								<th>Feedback</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Responses will be added dynamically here -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
